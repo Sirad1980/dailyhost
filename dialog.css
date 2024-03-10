@@ -1,0 +1,71 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  #dialogContainerForward, #dialogContainerBackward, #dialogAddTeamMember, #dialogDeleteTeamMember{
+    width: 180px;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: lightgrey;
+    border: solid 0.5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  #dialogAddTeamMember, #dialogDeleteTeamMember{
+    width: 200px;
+    padding: 15px;
+    z-index: 999;
+  }
+  
+  .buttons {
+    width: 100%;
+    cursor: pointer;
+    padding: 2px 0px;
+    font-size: 12px;
+    border: 0;
+    margin: 1px 0;
+    height: 25px;
+  }
+
+  #closeBtnDialogForward,#closeBtnDialogBackward, 
+  #closeBtnInfo,#closeBtnTeam, #closeBtnAddTeamMember, #closeBtnDeleteTeamMember {
+    position: absolute;
+    top: 2px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #999;
+  }
+  
+  #okBtnForward,#okBtnBackward, #addBtnAddTeamMember, #okBtnDeleteTeamMember  {
+    background-color: #333652;
+    color: #fff;
+    margin-right: 10px;
+  }
+  #okBtnForward:hover,#okBtnBackward:hover, #addBtnAddTeamMember:hover, #okBtnDeleteTeamMember:hover {
+    background-color: #90ADC6;
+    color: #fff;
+  }
+  
+  #cancelBtnForward, #cancelBtnBackward, #cancelBtnAddTeamMember, #cancelDeleteTeamMember {
+    background-color: whitesmoke;
+    color: #000;
+  }
+
+  #cancelBtnForward:hover,#cancelBtnBackward:hover, #cancelBtnAddTeamMember:hover, #cancelDeleteTeamMember:hover  {
+    background-color: #90ADC6;
+    color: #fff;
+  }
+
+  .btn-group-dialog {
+    width: 100%;
+    margin: 0px auto;
+    display: inline-flex;
+  }

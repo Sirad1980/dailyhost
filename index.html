@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"  type='text/css'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dialog.css">
+    <link rel="stylesheet" href="settings.css">
+  </head>
+  <body>
+  <div class="popup-container">
+    <span id="closeExtension">&times;</span>
+    <i class="fas fa-cog" id="settings"></i>
+    <i class="fas fa-info-circle" id="info"></i>
+    
+    <i class="fas fa-user-group" id="team"></i>
+    <div class="popup-title">Host generator</div>
+    <p class="popup-subtitle">Never forget who is the host again.<p>
+    
+    <div class="popup-label">
+      <div class="label-wrapper">
+        <label id="label-text">Generate daily host by clicking a button.</label>
+        <label id="label"></label>
+        <!-- <i class="fas fa-arrow-rotate-right" id="forward"></i>
+        <i class="fas fa-arrow-rotate-left" id="backward"></i> -->
+
+      </div>
+    </div>
+
+    
+
+    <div class="popup-buttons">
+      <button class="popup-button" id="btnToday">Host Today</button>
+      <div></div>
+        <button class="popup-button" id="btnTomorrow">Host Tomorrow</button>
+      <div></div>
+
+      
+    </div>
+
+    <fieldset>
+      <legend>Skip Host</legend>
+        <div id="skip-host">
+          <p id="skip-previous"><a><i class="fas fa-arrow-rotate-left" id="backward"></i> Previous</a></p>
+          <p id="skip-next"><a>Next <i class="fas fa-arrow-rotate-right" id="forward"></i></a></p>
+
+        </div>
+    </fieldset>
+
+    <div class="lds-facebook hidden" id="progressContainer" style="display:none;"><div></div><div></div><div></div></div>
+  </div>
+
+</div>
+
+  <!-- Dialog Container Skip Forward -->
+  <div id="dialogContainerForward" style="display:none;">
+    <span id="closeBtnDialogForward">&times;</span>
+    <p>Do you want to skip to the next host?</p>
+    <div class="btn-group-dialog">
+      <button class="buttons" id="okBtnForward">OK</button>
+      <button class="buttons" id="cancelBtnForward">Cancel</button>
+    </div>
+    
+  </div>
+
+  <!-- Dialog Container Skip Backward -->
+  <div id="dialogContainerBackward" style="display:none;">
+    <span id="closeBtnDialogBackward">&times;</span>
+    <p>Do you want to skip to the next host?</p>
+    <div class="btn-group-dialog">
+      <button class="buttons" id="okBtnBackward">OK</button>
+      <button class="buttons" id="cancelBtnBackward">Cancel</button>
+    </div>
+    
+  </div>
+
+  <!-- Settings Container -->
+  <div id="settingsContainer" style="display:none;">
+    <span id="closeBtnSettings">&times;</span>
+    <h2>Extension Settings</h2>
+    <p id="settings-subtitle">Enter provided settings below.<p></p>
+
+    <form id="settingsForm">
+
+      <label class="label-settings" for="repository">Git Repository Name:</label>
+      <input type="text" id="repository" name="repository">
+
+      <label class="label-settings" for="username">Git User Name:</label>
+      <input type="text" id="username" name="username">
+
+      <label class="label-settings" for="path">Git Path to JSON File:</label>
+      <input type="text" id="path" name="path">
+
+      <label class="label-settings" for="token">Git Personal Access Token:</label>
+      <input type="password" id="accessToken" name="accessToken">
+      <div class="btn-group-settings">
+        <button class="buttonsSettings" id="saveBtn" type="submit">SAVE</button>
+        <button class="buttonsSettings" id="cancelBtnSettings">Cancel</button>
+      </div>
+
+    </form>
+  </div>
+
+  <!-- Info Container -->
+  <div id="infoContainer" style="display:none;">
+    <span id="closeBtnInfo">&times;</span>
+
+    <div id="scrollable-container">
+      <div id="text-wrapper">
+        <h2>Daily Host Generator - Your Scrum Team's Companion!</h2>
+        <h3>Description:</h3>
+        <p>
+            Daily Host Generator, developed by Sirad Salkanovic, is a powerful Chrome extension designed to streamline the process of determining daily hosts for your scrum meetings. This handy tool empowers scrum teams by providing the flexibility to generate hosts for both today and tomorrow, ensuring efficient planning and organization.
+        </p>
+        <h3>Key Features:</h3>
+        <ul>
+            <li><strong>Generate Daily Hosts:</strong> Easily generate hosts for today's and tomorrow's scrum meetings with just a click. Simplify the planning process and ensure smooth daily stand-ups for your team.</li>
+            <li><strong>Skip Host Option:</strong> Unforeseen circumstances? No problem! Use the skip host feature to adjust your schedule seamlessly, keeping your scrum meetings flexible and accommodating.</li>
+            <li><strong>GitHub Integration:</strong> Daily Host Generator stores data in a GitHub file, ensuring secure and accessible storage for your scrum team's daily hosts. To get started, you'll need a GitHub account and a personal access token.</li>
+            <li><strong>Customizable Settings:</strong> Tailor the extension to fit your team's unique needs with the settings dialog. Enter your GitHub repository details, username, file path, and access token for a personalized experience.</li>
+        </ul>
+        <h3>How to Use:</h3>
+        <ol>
+            <li>Install the Daily Host Generator Chrome extension.</li>
+            <li>Open the settings dialog and input your GitHub repository details, username, file path, and access token.</li>
+            <li>Generate hosts effortlessly for today and tomorrow or skip hosts as needed.</li>
+        </ol>
+        <h3>Why Daily Host Generator?</h3>
+        <ul>
+            <li><strong>Save Time:</strong> Streamline the process of determining hosts for daily scrum meetings.</li>
+            <li><strong>Flexibility:</strong> Easily skip hosts to accommodate unexpected changes in your team's schedule.</li>
+            <li><strong>GitHub Integration:</strong> Securely store and access your data in a GitHub file for enhanced collaboration.</li>
+        </ul>
+        <p>
+            <strong>Note:</strong> A GitHub account and a personal access token are necessary for using the Daily Host Generator. Ensure you have the required credentials to unlock the full potential of this extension.
+        </p>
+        <p>
+            Enhance your scrum team's daily stand-ups with Daily Host Generator - because effective communication starts with organized hosting!
+        </p>
+        <button class="buttons" id="cancelBtnInfo">Close</button>
+      </div>
+
+    </div>   
+  </div>
+
+    <!-- Team Container -->
+    <div id="teamContainer" style="display:none;">
+      <span id="closeBtnTeam">&times;</span>
+      <h2 id="team-title">Team Members</h2>
+      <p id="team-subtitle">Now you can manage your team.<p></p>
+      <p id="addTeamMember"><a><i class="fas fa-user-plus"></i></a></p>
+      <div id="scrollable-container">
+        <div id="text-wrapper">
+          <div id="deletingItem"><p>Deleting Team Member...</p></div>
+          <div id="updatingList" style="display:none;"><p>Updating List...</p></div>
+          <div id="team-list">
+         
+          </div>
+          <button class="buttons" id="cancelBtnTeam">Close</button>
+        </div>
+  
+      </div>   
+    </div>
+
+    <!-- Add Team Member Dialog  -->
+    <div id="overlay" style="display:none;"></div>
+    <div id="dialogAddTeamMember" style="display:none;">
+      
+      
+        <span id="closeBtnAddTeamMember">&times;</span>
+        <h3 id="addTeamMemberTitle">Add new team member</h3>
+
+        <label class="labelNameAddTeamMember" for="memberName">Name:</label>
+        <input type="text" id="inputNameAddTeamMember" name="memberName">
+        <div class="btn-group-dialog">
+          <button class="buttons" id="addBtnAddTeamMember">Add</button>
+          <button class="buttons" id="cancelBtnAddTeamMember">Cancel</button>
+        </div>      
+    </div>
+
+    <!-- Delete Team Member Dialog -->
+    <div id="overlay" style="display:none;"></div>
+  <div id="dialogDeleteTeamMember" style="display:none;">
+    <span id="closeBtnDeleteTeamMember">&times;</span>
+    <p>Do you want to delete this team member?</p>
+    <div class="btn-group-dialog">
+      <button class="buttons" id="okBtnDeleteTeamMember">OK</button>
+      <button class="buttons" id="cancelDeleteTeamMember">Cancel</button>
+    </div>
+    
+  </div>
+  
+
+</div>
+    <script src="scripts/script.js"></script>
+  </body>
+</html>

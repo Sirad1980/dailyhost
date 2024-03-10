@@ -1,0 +1,138 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  #settingsContainer, #infoContainer, #teamContainer {
+    display: none;
+    position: fixed;
+    height: 277px;
+    width: 180px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: lightgrey;
+    border: solid 0.5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  #infoContainer, #teamContainer {
+    width: 200px;
+    height: 277px;
+    padding: 20px 0px 20px 20px;
+  }
+  
+  .buttonsSettings {
+    width: 100%;
+    cursor: pointer;
+    padding: 2px 0px;
+    font-size: 12px;
+    border: 0;
+    margin: 1px 0;
+    margin-top: 12px;
+    height: 30px 
+  }
+
+  #closeBtnSettings {
+    position: absolute;
+    top: 2px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #999;
+  }
+  
+  #saveBtn {
+    background-color: #333652;
+    color: #fff;
+    margin-right: 10px;
+  }
+
+  #saveBtn:hover {
+    background-color: #90ADC6;
+    color: #fff;
+  }
+
+  #cancelBtnSettings, #cancelBtnInfo, #cancelBtnTeam {
+    background-color: whitesmoke;
+    color: #000;
+  }
+
+  #cancelBtnInfo {
+    margin-bottom: 15px;
+  }
+
+  #cancelBtnTeam {
+    margin-top: 10px;
+    margin-bottom: 25px;
+  }
+
+
+
+  #cancelBtnSettings:hover, #cancelBtnInfo:hover, #cancelBtnTeam:hover {
+    background-color: #90ADC6;
+    color: #fff;
+  }
+
+  .label-settings {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    font-size: 10px;
+    margin-bottom: 1px;
+    text-transform: uppercase;
+  }
+
+  .btn-group-settings {
+    width: 100%;
+    margin: 10px auto;
+    display: inline-flex;
+  }
+
+  #scrollable-container {
+    width: 100%;
+    max-height: 238px;
+    overflow-y: auto;
+    text-align: left;
+    margin-top: 5px;
+    
+  }
+
+  #infoContainer #scrollable-container{
+    max-height: 292px;
+  }
+  
+  ul, ol {
+    padding-left: 12px;
+  }
+  
+  input {
+    border: 0px;
+    padding: 3px 2px;
+    width: 100%;
+  }
+  #text-wrapper {
+    padding-right: 10px;
+  }
+
+  #settingsContainer h2 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-block-end: 0;
+  }
+
+  #settings-subtitle {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding-right: 20px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 10px;
+  }
+

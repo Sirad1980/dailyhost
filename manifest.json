@@ -1,0 +1,22 @@
+{
+    "manifest_version":3,
+    "name":"Daily Host",
+    "description":"Generate host for scrum daily meeting",
+    "version":"1.4.1",
+    "icons":{
+        "128":"images/icon128.png"
+    },
+    "page_action": {
+        "default_icon":{
+           "128":"images/icon128.png"
+        }
+    },
+    "action":{
+        "default_popup":"index.html"
+    },
+    "permissions": [
+        "storage"
+
+    ]
+
+}

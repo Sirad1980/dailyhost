@@ -1,0 +1,340 @@
+body {
+    background: #E9EAEC; /* Make it white if you need */
+    color: #333652;
+    padding: 0 0px;
+    margin: 0;
+    width: 200px;
+    height: 290px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+/* Define styles for the progress container */
+.progress-container {
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+.hidden{ display: none; }
+
+.lds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 20%;
+  height: 10%;
+  top: 47%;
+  left: 10%;
+  position: absolute;
+  z-index: 999;
+}
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 2px;
+  width: 5px;
+  background: lightseagreen;
+  opacity: 0.4;
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+  z-index: 999;
+}
+.lds-facebook div:nth-child(1) {
+  left: 8px;
+  animation-delay: -0.24s;
+  z-index: 999;
+}
+.lds-facebook div:nth-child(2) {
+  left: 15px;
+  animation-delay: -0.12s;
+  z-index: 999;
+}
+.lds-facebook div:nth-child(3) {
+  left: 22px;
+  animation-delay: 0;
+  z-index: 999;
+}
+@keyframes lds-facebook {
+  0% {
+    top: 4px;
+    height: 12px;
+  }
+  50%, 100% {
+    top: 8px;
+    height: 5px;
+  }
+}
+
+
+.popup-label {
+  display: inline-table;
+  text-align: center;
+  margin-top: 10px;
+  border: 1px solid lightseagreen;
+
+  padding: 20px 0px;
+  font-size: 14px;
+  
+  background-color: whitesmoke;
+  width: 90%;
+  height: 20px;
+  
+}
+#label {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+
+
+.popup-buttons {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.popup-button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  margin-bottom: 1px;
+  
+  background-color: #333652; /* Accent color */
+  color: #ecf0f1; /* Light text color */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.popup-button:hover {
+  background-color: #90ADC6; /* Darker accent color on hover */
+  color: white;
+}
+
+.popup-title{
+  color:#333652;
+  text-align: center;
+  padding: 20px 0 0 0;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.popup-subtitle{
+  padding: 0 15px;
+  margin-top: 0;
+  font-size: 10px;
+  text-align: center;
+}
+
+#closeExtension{
+  position: absolute;
+  top: 2px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #999;
+}
+
+#settings{
+  position: absolute;
+  top: 7px;
+  right: 30px;
+  font-size: 12px;
+  cursor: pointer;
+  color: #999;
+}
+
+#info{
+  position: absolute;
+  top: 7px;
+  right: 52px;
+  font-size: 12px;
+  cursor: pointer;
+  color: #999;
+}
+
+#backward{
+  font-size: 10px;
+}
+
+#forward{
+  font-size: 10px;
+}
+
+#team{
+  position: absolute;
+  top: 7px;
+  left: 10px;
+  font-size: 12px;
+  cursor: pointer;
+  color: #999;
+}
+
+#forward:hover, #team:hover, 
+#backward:hover, #info:hover, #settings:hover {
+  color: black;
+}
+
+.btn-icon {
+  position: absolute;
+    background: darkgrey;
+    color: white;
+    padding: 7px;
+    left: 30px;
+    top: 92px;
+    font-size: 21px;
+}
+
+.btn-icon-today {
+  left: 30px;
+  top: 92px;
+  padding: 7.2px 6.5px;
+}
+
+.btn-icon-tomorrow {
+  left: 30px;
+    top: 129.5px;
+    padding: 7.2px 5px;
+}
+
+.btn-icon-skip {
+  left: 30px;
+  top: 167px;
+  padding: 7.2px 5px;
+}
+
+#list-item{
+  border: 1px solid lightgray;
+  height: 30px;
+  display: flex;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+#list-item:hover{
+  border: 1px solid lightseagreen;
+}
+
+#item-name{
+  width: 100%;
+  margin-top: 8px;
+  margin-left: 2px;
+}
+
+#list-item-delete{
+  margin-top: 5%;
+  margin-right: 2%;
+  color: darkgray;
+  cursor: pointer;
+  
+}
+
+#list-item-delete:hover{
+  color: black;
+}
+
+#skip-host{
+  display: flex;
+}
+
+#skip-previous, #skip-next{
+  margin: 0;
+  width: 100%;
+  color: darkgrey;
+  cursor: pointer;
+}
+
+#skip-previous:hover, #skip-next:hover{
+  color: black;
+}
+
+fieldset {
+  border: 1px solid lightgrey;
+  margin: 5px 9px 9px 9px;
+}
+
+fieldset legend {
+  color: darkgrey;
+
+}
+
+#label-text{
+  margin-bottom:5px;
+}
+
+.label-wrapper{
+  display: grid;
+  align-items: self-end;
+  height: 35px;
+  margin-top: 2px;
+}
+
+#addTeamMember{
+  position:absolute;
+  top: -6px;
+  left: 8px;
+  display: flex;
+  font-size: 12px;
+  cursor: pointer;
+  color: grey;
+}
+
+#addTeamMember:hover{
+  color: black;
+}
+
+#team-title{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 16px;
+  padding-right: 20px;
+  margin-block-end: 0;
+}
+
+#team-subtitle {
+  position: relative;
+  width: 100%;
+  right: 9px;
+  text-align: center;
+  padding-right: 20px;
+  margin-top: 0;
+  font-size: 10px;
+}
+
+#deletingItem, #updatingList {
+  display: none;
+  margin: 80px 25px;
+}
+
+.labelNameAddTeamMember{
+  display: flex;
+  margin-bottom: 2px;
+}
+
+#dialogAddTeamMember .btn-group-dialog{
+  margin: 15px 0 0 0;
+}
+#overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 300px;
+  height: 350px;
+  background: black;
+  z-index: 998;
+  opacity: 0.4;
+}
+
+#dialogAddTeamMember #contents {
+  z-index: 999;
+}
+
+#addTeamMemberTitle {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-block-end: 10px;
+}
